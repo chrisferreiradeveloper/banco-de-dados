@@ -1,3 +1,9 @@
+-- ============================================================
+-- EXERCÍCIO: UPDATE, DELETE, GROUP BY e Funções de Agregação
+-- Base: db_2_bim / tabela vendas
+-- Testado em MariaDB 10.11 (compatível com MySQL 8)
+-- ============================================================
+
 USE db_2_bim;
 
 -- ------------------------------------------------------------
