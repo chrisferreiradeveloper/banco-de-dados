@@ -1,7 +1,4 @@
--- ============================================================
--- BASE DE DADOS DIDÁTICA: CONTROLE DE VENDAS
--- Compatível com MySQL 8
--- ============================================================
+
 create database if not exists db_2_bim;
 use db_2_bim;
 
