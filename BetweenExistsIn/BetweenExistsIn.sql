@@ -1,9 +1,3 @@
--- Challenge Night III – BETWEEN, IN, LIKE, EXISTS (Missões da Noite)
--- Consultas SQL para as 20 Missões
-
--- ==========================================
--- PARTE 1 — COALESCE
--- ==========================================
 
 -- Missão 1 — Clientes sem compras
 SELECT 
@@ -51,9 +45,8 @@ SELECT nome, cidade, total_gasto
 FROM GastoCliente
 ORDER BY total_gasto DESC;
 
--- ==========================================
--- PARTE 2 — BETWEEN e >= / <=
--- ==========================================
+
+-- PARTE — BETWEEN e >= / <=
 
 -- Missão 5 — Clientes por faixa de renda
 SELECT nome, cidade, renda
@@ -82,9 +75,7 @@ SELECT nome AS produto, preco, estoque
 FROM Produtos
 WHERE preco >= 100 AND preco <= 250;
 
--- ==========================================
--- PARTE 3 — IN
--- ==========================================
+-- PARTE — IN
 
 -- Missão 9 — Campanha regional
 SELECT nome, cidade
@@ -105,9 +96,7 @@ FROM Vendas v
 INNER JOIN Vendedores vd ON v.id_vendedor = vd.id_vendedor
 WHERE vd.id_vendedor IN (1, 3, 5);
 
--- ==========================================
 -- PARTE 4 — LIKE
--- ==========================================
 
 -- Missão 12 — Busca por nomes
 SELECT nome, cidade, renda
@@ -124,9 +113,7 @@ SELECT nome
 FROM Vendedores
 WHERE nome LIKE '%Eduardo%';
 
--- ==========================================
--- PARTE 5 — EXISTS
--- ==========================================
+-- PARTE — EXISTS
 
 -- Missão 15 — Clientes que já compraram
 SELECT id_cliente AS codigo, nome, cidade
@@ -164,9 +151,7 @@ WHERE NOT EXISTS (
     WHERE v.id_cliente = c.id_cliente
 );
 
--- ==========================================
--- PARTE 6 — Combinando os conceitos
--- ==========================================
+-- PARTE - Combinando os conceitos
 
 -- Missão 19 — Clientes de alto potencial
 SELECT nome AS cliente, cidade, renda
