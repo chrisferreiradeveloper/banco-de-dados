@@ -15,9 +15,7 @@
 -- ============================================================
 
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 01 - Todos os clientes
--- ------------------------------------------------------------
 -- Liste TODOS os clientes, mesmo aqueles que nunca realizaram
 -- uma venda.
 --
@@ -40,9 +38,8 @@ FROM clientes AS c
 LEFT JOIN vendas AS v
     ON c.id_cliente = v.id_cliente;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 02 - Clientes sem compras
--- ------------------------------------------------------------
+
 -- Liste apenas os clientes que nunca realizaram uma venda.
 --
 -- Exiba:
@@ -64,9 +61,7 @@ LEFT JOIN vendas AS v
     ON c.id_cliente = v.id_cliente
 WHERE v.id_venda IS NULL;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 03 - Todos os vendedores
--- ------------------------------------------------------------
 -- Liste TODOS os vendedores,
 -- inclusive aqueles que ainda não realizaram vendas.
 --
@@ -87,9 +82,7 @@ FROM vendedores AS vd
 LEFT JOIN vendas AS v
     ON vd.id_vendedor = v.id_vendedor;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 04 - Vendedores sem vendas
--- ------------------------------------------------------------
 -- Liste somente os vendedores
 -- que ainda não venderam nenhum produto.
 --
@@ -109,9 +102,7 @@ LEFT JOIN vendas AS v
     ON vd.id_vendedor = v.id_vendedor
 WHERE v.id_venda IS NULL;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 05 - Todos os produtos
--- ------------------------------------------------------------
 -- Liste TODOS os produtos cadastrados,
 -- inclusive aqueles que nunca foram vendidos.
 --
@@ -132,9 +123,8 @@ FROM produtos AS p
 LEFT JOIN itens_venda AS iv
     ON p.id_produto = iv.id_produto;
 
--- ------------------------------------------------------------
+
 -- EXERCÍCIO 06 - Produtos nunca vendidos
--- ------------------------------------------------------------
 -- Liste apenas os produtos
 -- que nunca apareceram em uma venda.
 --
@@ -154,9 +144,7 @@ LEFT JOIN itens_venda AS iv
     ON p.id_produto = iv.id_produto
 WHERE iv.id_item IS NULL;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 07 - Quantidade de vendas por cliente
--- ------------------------------------------------------------
 -- Exiba TODOS os clientes,
 -- informando a quantidade de vendas realizada por cada um.
 --
@@ -180,9 +168,7 @@ LEFT JOIN vendas AS v
     ON c.id_cliente = v.id_cliente
 GROUP BY c.id_cliente, c.nome_cliente;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 08 - Valor total comprado por cliente
--- ------------------------------------------------------------
 -- Liste TODOS os clientes.
 --
 -- Exiba:
@@ -206,9 +192,7 @@ LEFT JOIN vendas AS v
     ON c.id_cliente = v.id_cliente
 GROUP BY c.id_cliente, c.nome_cliente;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 09 - Quantidade vendida por produto
--- ------------------------------------------------------------
 -- Liste TODOS os produtos cadastrados.
 --
 -- Exiba:
@@ -232,9 +216,7 @@ LEFT JOIN itens_venda AS iv
     ON p.id_produto = iv.id_produto
 GROUP BY p.id_produto, p.nome_produto;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 10 - Produtos sem movimentação
--- ------------------------------------------------------------
 -- Liste apenas os produtos
 -- que nunca foram vendidos.
 --
@@ -256,9 +238,7 @@ LEFT JOIN itens_venda AS iv
     ON p.id_produto = iv.id_produto
 WHERE iv.id_item IS NULL;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 11 - Relatório completo de clientes
--- ------------------------------------------------------------
 -- Liste TODOS os clientes.
 --
 -- Exiba:
@@ -284,9 +264,7 @@ LEFT JOIN vendas AS v
 GROUP BY c.id_cliente, c.nome_cliente, c.cidade
 ORDER BY total_comprado DESC;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 12 - Relatório de vendedores
--- ------------------------------------------------------------
 -- Para TODOS os vendedores,
 -- exiba:
 --
@@ -310,9 +288,7 @@ LEFT JOIN vendas AS v
     ON vd.id_vendedor = v.id_vendedor
 GROUP BY vd.id_vendedor, vd.nome_vendedor;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 13 - Produtos e categorias
--- ------------------------------------------------------------
 -- Liste TODOS os produtos,
 -- exibindo:
 --
@@ -336,9 +312,7 @@ LEFT JOIN itens_venda AS iv
 GROUP BY p.id_produto, p.categoria, p.nome_produto
 ORDER BY p.categoria, p.nome_produto;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 14 - Clientes e última venda
--- ------------------------------------------------------------
 -- Liste TODOS os clientes.
 --
 -- Exiba:
@@ -360,9 +334,8 @@ LEFT JOIN vendas AS v
     ON c.id_cliente = v.id_cliente
 GROUP BY c.id_cliente, c.nome_cliente;
 
--- ------------------------------------------------------------
 -- EXERCÍCIO 15 - Dashboard Gerencial
--- ------------------------------------------------------------
+
 -- Monte um relatório contendo TODOS os clientes.
 --
 -- Exiba:
