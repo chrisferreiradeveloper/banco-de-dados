@@ -2,9 +2,7 @@
 -- Equipe: Ademir, Christian, Gustavo, Pedro e você.
 -- Consultas SQL para os 15 Exercícios
 
--- ==========================================
 -- Exercício 01 – Clientes e Compras
--- ==========================================
 SELECT 
     c.nome AS nome_cliente, 
     c.cidade, 
